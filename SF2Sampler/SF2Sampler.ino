@@ -267,7 +267,19 @@ static void IRAM_ATTR control_task(void *userData) {
         vTaskDelay(1);
         taskYIELD();
 
-
+#ifdef ENABLE_GUI
+        if (__builtin_expect((gui_blocker == 0), 1)) {
+            // Read GUI input
+            gui.encA = digitalRead(ENC0_A_PIN);
+            gui.encB = digitalRead(ENC0_B_PIN);
+            gui.btnState = digitalRead(BTN0_PIN);
+            
+            gui.process();
+        } else {
+            gui_blocker--;
+            if (gui_blocker < 0) { gui_blocker = 0; }
+        }
+#endif
         
         if (frame_count >= 64) {
 
@@ -427,3 +439,4 @@ void setup() {
 void loop() {
     vTaskDelete(NULL);
 }
+
