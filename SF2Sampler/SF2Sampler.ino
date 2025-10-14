@@ -152,7 +152,7 @@ void handleControlChange(byte ch, byte control, byte value) {
 }
 
 void handleProgramChange(uint8_t ch, uint8_t program) {
-    ESP_LOGI("MIDI", "Program change on channel 0%u → program %u", ch-1, program);
+//    ESP_LOGI("MIDI", "Program change on channel 0%u → program %u", ch-1, program);
     synth.programChange(ch-1, program);
 }
 
@@ -304,7 +304,7 @@ static void IRAM_ATTR control_task(void *userData) {
 // ========================== Core 1 Task 3 ===============================================================================================
 static void IRAM_ATTR gui_task(void *userData) { 
     vTaskDelay(50);
-    ESP_LOGI(TAG, "Starting Task3");
+//    ESP_LOGI(TAG, "Starting Task3");
     
     while (true) {
         if (gui_blocker == 0) {
@@ -375,9 +375,9 @@ void setup() {
   //  SDMMC.setPins(SDMMC_CLK, SDMMC_CMD, SDMMC_D0, SDMMC_D1, SDMMC_D2, SDMMC_D3)
     SD_MMC.setPins(SDMMC_CLK, SDMMC_CMD, SDMMC_D0, SDMMC_D1, SDMMC_D2, SDMMC_D3);
     if (!SD_MMC.begin()) {
-        ESP_LOGE(TAG, "SD init failed");
+//        ESP_LOGE(TAG, "SD init failed");
     } else {
-        ESP_LOGE(TAG, "SD initialized");
+//        ESP_LOGE(TAG, "SD initialized");
     }
 
     if (!LittleFS.begin()) {
@@ -390,7 +390,7 @@ void setup() {
 #ifdef ENABLE_GUI
     gui.begin();
     gui.busyMessage( "Synth Loading...");
-    ESP_LOGI(TAG, "GUI splash");
+//    ESP_LOGI(TAG, "GUI splash");
 #endif
 
 #ifdef ENABLE_REVERB
@@ -439,5 +439,6 @@ void setup() {
 void loop() {
     vTaskDelete(NULL);
 }
+
 
 
