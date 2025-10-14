@@ -17,7 +17,7 @@
 *
 * (c) Copych 2025, License: MIT https://github.com/copych/SF2_Sampler?tab=MIT-1-ov-file#readme
 
-This fork adds usb midi host functionality to the Copych code.
+This fork by Lidlaux adds usb midi host functionality to the Copych code.
 * 
 * More info:
 * https://github.com/copych/SF2_Sampler
@@ -439,4 +439,5 @@ void setup() {
 void loop() {
     vTaskDelete(NULL);
 }
+
 
