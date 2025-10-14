@@ -1,3 +1,9 @@
+This fork provides experimental usb midi host function to the repository author code. Logs and gui are disabled. To change check config.h. For usb midi host function to work enable usb host on ESP32-S3 and in Arduino IDE change USB-Mode to USB-OTG(TinyUSB).
+
+For this fork USB midi host library by Enudenki was used.
+https://github.com/enudenki/esp32-usb-host-midi-library
+
+
 # ESP32-S3 SoundFont (SF2) Sampler Synthesizer
 
 An SF2 (SoundFont 2) based wavetable synth designed specifically for the ESP32-S3 microcontroller. This project leverages the enhanced memory capabilities of the ESP32-S3 (with PSRAM) to efficiently load and play SoundFont samples, providing a compact and powerful sampler solution. It's cheap and simple, yet powerful.
