@@ -1,4 +1,4 @@
-This fork provides usb midi host function to the project author Copych code. Logs and gui are disabled. To change midi input mode and enable gui check config.h. For usb midi host function to work enable usb host on ESP32-S3 and in Arduino IDE change USB-Mode to USB-OTG(TinyUSB).
+This fork provides usb midi host function to the project author Copych code. Logs and gui are disabled. To change midi input mode and enable gui check config.h. For usb midi host function to work on ESP32-S3 enable usb host by soldering pad and in Arduino IDE change USB-Mode to USB-OTG(TinyUSB).
 
 For this fork USB midi host library code by Enudenki was used.
 https://github.com/enudenki/esp32-usb-host-midi-library
