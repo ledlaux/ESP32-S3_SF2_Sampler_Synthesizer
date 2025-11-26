@@ -17,7 +17,25 @@ This fork builds upon the original project by **Evgeny Aslovskiy (Copych)**, add
 ###  Enabling USB MIDI Host on ESP32-S3
 1. **Hardware setup** – Solder the **USB-OTG host pad** on your ESP32-S3 board.  
 2. **IDE configuration** – In the **Arduino IDE** select 
-   `Tools → USB Mode → USB-OTG (TinyUSB)`  
+   `Tools →
+   
+USB CDC On Boot: “Disabled”   
+CPU Frequency: “240MHz (WiFi)”   
+Core Debug Level: “None”   
+USB DFU On Boot: “Disabled”   
+Erase All Flash Before Sketch Upload: “Disabled” 
+Events Run On: “Core 1”   
+Flash Mode: “QIO 80MHz”   
+Flash Size: “16MB (128Mb)”   
+JTAG Adapter: “Disabled”   
+Arduino Runs On: “Core 1”   
+USB Firmware MSC On Boot: “Disabled”   
+Partition Scheme: “Custom”   
+PSRAM: “OPI PSRAM”  
+Upload Mode: “UART0 / Hardware CDC”   
+Upload Speed: “921600”  
+USB Mode: “USB-OTG (TinyUSB)”   
+Zigbee Mode: “Disabled”   
 
 
 
